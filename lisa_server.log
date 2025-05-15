@@ -1,0 +1,52 @@
+2025/05/15 01:21:18 DEBUG: init() function started.
+2025/05/15 01:21:18 DEBUG: Templates parsed.
+2025/05/15 01:21:18 DEBUG: Attempting to open database at ./lisa.db...
+2025/05/15 01:21:18 DEBUG: Database opened successfully.
+2025/05/15 01:21:18 DEBUG: Database ping successful.
+2025/05/15 01:21:18 DEBUG: Attempting to execute createTablesSQL...
+2025/05/15 01:21:18 DEBUG: Database tables checked/created successfully.
+2025/05/15 01:21:18 DEBUG: Ensuring default settings are present...
+2025/05/15 01:21:18 DEBUG: Preparing statement for INSERT OR IGNORE INTO settings...
+2025/05/15 01:21:18 DEBUG: Statement prepared successfully.
+2025/05/15 01:21:18 DEBUG: Attempting to insert/ignore setting 1: key="llm_api_key", value="YOUR_API_KEY_HERE"
+2025/05/15 01:21:18 DEBUG: Successfully inserted/ignored setting 1: key="llm_api_key"
+2025/05/15 01:21:18 DEBUG: Attempting to insert/ignore setting 2: key="llm_base_url", value="YOUR_LLM_BASE_URL_HERE"
+2025/05/15 01:21:18 DEBUG: Successfully inserted/ignored setting 2: key="llm_base_url"
+2025/05/15 01:21:18 DEBUG: Attempting to insert/ignore setting 3: key="llm_model", value="llama3-8b-8192"
+2025/05/15 01:21:18 DEBUG: Successfully inserted/ignored setting 3: key="llm_model"
+2025/05/15 01:21:18 DEBUG: Closing prepared statement for settings insert.
+2025/05/15 01:21:18 DEBUG: Default settings check complete. Update API key/URL if using defaults.
+2025/05/15 01:21:18 DEBUG: init() function finished.
+2025/05/15 01:21:18 DEBUG: main() function started.
+2025/05/15 01:21:18 DEBUG: Database connection (db) is not nil in main().
+2025/05/15 01:21:18 DEBUG: Attempting to start webserver on http://0.0.0.0:8080...
+2025/05/15 01:23:03 Received user message: Hei LISA, hvordan går det?
+2025/05/15 01:23:03 Automatically retrieved 0 memories for user query: Hei LISA, hvordan går det?
+2025/05/15 01:23:03 DEBUG: getLLMConfig() called.
+2025/05/15 01:23:03 DEBUG: Querying database for llm_api_key and llm_base_url...
+2025/05/15 01:23:03 DEBUG: Iterating through settings rows...
+2025/05/15 01:23:03 DEBUG: Scanned setting: key='llm_api_key', value='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'
+2025/05/15 01:23:03 DEBUG: Scanned setting: key='llm_base_url', value='https://api.groq.com/openai/v1/chat/completions'
+2025/05/15 01:23:03 DEBUG: After loop, config.APIKey: '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'
+2025/05/15 01:23:03 DEBUG: After loop, config.BaseURL: 'https://api.groq.com/openai/v1/chat/completions'
+2025/05/15 01:23:03 DEBUG: getLLMConfig() successful.
+2025/05/15 01:23:03 DEBUG: getLLMModel() called.
+2025/05/15 01:23:03 DEBUG: Querying database for llm_model...
+2025/05/15 01:23:03 DEBUG: Scanned llm_model: 'llama3-70b-8192'
+2025/05/15 01:23:03 DEBUG: getLLMModel() successful.
+2025/05/15 01:24:33 Received user message: husk at jeg heter Åsmund
+2025/05/15 01:24:33 Automatically retrieved 0 memories for user query: husk at jeg heter Åsmund
+2025/05/15 01:24:33 DEBUG: getLLMConfig() called.
+2025/05/15 01:24:33 DEBUG: Querying database for llm_api_key and llm_base_url...
+2025/05/15 01:24:33 DEBUG: Iterating through settings rows...
+2025/05/15 01:24:33 DEBUG: Scanned setting: key='llm_api_key', value='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'
+2025/05/15 01:24:33 DEBUG: Scanned setting: key='llm_base_url', value='https://api.groq.com/openai/v1/chat/completions'
+2025/05/15 01:24:33 DEBUG: After loop, config.APIKey: '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'
+2025/05/15 01:24:33 DEBUG: After loop, config.BaseURL: 'https://api.groq.com/openai/v1/chat/completions'
+2025/05/15 01:24:33 DEBUG: getLLMConfig() successful.
+2025/05/15 01:24:33 DEBUG: getLLMModel() called.
+2025/05/15 01:24:33 DEBUG: Querying database for llm_model...
+2025/05/15 01:24:33 DEBUG: Scanned llm_model: 'llama3-70b-8192'
+2025/05/15 01:24:33 DEBUG: getLLMModel() successful.
+2025/05/15 01:24:34 LLM requested tool calls: [{ID:call_yfr0 Type:function Function:{Name:create_memory Arguments:{"content":"Brukerens navn er Åsmund","importance":3,"type":"personlig_detalj"}}}]
+2025/05/15 01:24:34 Memory created: Brukerens navn er Åsmund
